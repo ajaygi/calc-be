@@ -21,6 +21,7 @@ public class SubController {
     @GetMapping("/subtract")
     public ApiResult subtract(@RequestParam BigDecimal operand_1, @RequestParam BigDecimal operand_2){
         log.info("SubController called....");
+        log.info("calling service method....");
         return subService.subCalc(operand_1, operand_2);
     }
 }
